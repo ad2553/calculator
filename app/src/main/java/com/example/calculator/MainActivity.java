@@ -2,12 +2,11 @@ package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 public class MainActivity extends AppCompatActivity
 {
     EditText display;
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity
     }
     public  boolean canAct(String st)
     {
-            if (st.isEmpty() || st == "-" || st == "." || st == "-." || st == "+." || !actable)
+            if (st.isEmpty() || st == "-" || st == "." || st == "+" || st == "-." || st == "+." || !actable)
             {
                 Toast.makeText(this,"invalid input",Toast.LENGTH_LONG).show();
                 return false;
@@ -110,7 +109,7 @@ public class MainActivity extends AppCompatActivity
     public void equalsclicked(View view)
     {
         st = display.getText().toString();
-        if(st.isEmpty() || st == "-" || st == "." || st == "-." || st == "+.")
+        if(st.isEmpty() || st == "-" || st == "." || st == "+" || st == "-." || st == "+.")
             Toast.makeText(this,"invalid input",Toast.LENGTH_LONG).show();
         else
         {
@@ -133,5 +132,8 @@ public class MainActivity extends AppCompatActivity
 
     public void creditclicked(View view)
     {
+        Intent si = new Intent(this, creditActivity.class);
+        si.putExtra("lastans",lastanswer);
+        startActivity(si);
     }
 }
