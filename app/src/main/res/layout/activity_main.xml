@@ -6,22 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberSigned"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.067" />
-
     <Button
         android:id="@+id/plusbt"
         android:layout_width="75dp"
         android:layout_height="40dp"
+        android:onClick="plusclicked"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,6 +23,7 @@
         android:id="@+id/minusbt"
         android:layout_width="75dp"
         android:layout_height="40dp"
+        android:onClick="minusclicked"
         android:text="-"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,6 +36,7 @@
         android:id="@+id/multibt"
         android:layout_width="75dp"
         android:layout_height="40dp"
+        android:onClick="multiclicked"
         android:text="*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +49,7 @@
         android:id="@+id/divibt"
         android:layout_width="75dp"
         android:layout_height="40dp"
+        android:onClick="diviclicked"
         android:text="/"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,6 +62,7 @@
         android:id="@+id/resetbt"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:onClick="resetclicked"
         android:text="A/C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/minusbt"
@@ -82,6 +75,7 @@
         android:id="@+id/equalsbt"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:onClick="equalsclicked"
         android:text="="
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,4 +83,31 @@
         app:layout_constraintStart_toStartOf="@+id/multibt"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.352" />
+
+    <EditText
+        android:id="@+id/display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        android:onClick="displayclick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <Button
+        android:id="@+id/creditbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="creditclicked"
+        android:text="credits"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.903" />
 </androidx.constraintlayout.widget.ConstraintLayout>
